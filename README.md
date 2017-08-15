@@ -9,6 +9,9 @@ Feedstock license: BSD 3-Clause
 
 Summary: Module for decorators, wrappers and monkey patching.
 
+The aim of the wrapt module is to provide a transparent object proxy for
+Python, which can be used as the basis for the construction of function
+wrappers and decorator functions.
 
 
 Current build status
