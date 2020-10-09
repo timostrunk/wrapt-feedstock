@@ -9,7 +9,7 @@ source:
   sha256: b62ffa81fb85f4332a4f609cab4ac40709470da05643a082ec1eb88e6d9b97d7
 
 build:
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -27,7 +27,7 @@ test:
 
 about:
   home: https://github.com/GrahamDumpleton/wrapt
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_file: LICENSE
   summary: Module for decorators, wrappers and monkey patching
   description: |
