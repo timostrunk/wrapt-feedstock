@@ -27,7 +27,7 @@ test:
 
 about:
   home: https://github.com/GrahamDumpleton/wrapt
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_file: LICENSE
   summary: Module for decorators, wrappers and monkey patching
   description: |
