@@ -1,4 +1,4 @@
-{% set version = "1.14.0" %}
+{% set version = "1.14.1" %}
 
 package:
   name: wrapt
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wrapt/wrapt-{{ version }}.tar.gz
-  sha256: 8323a43bd9c91f62bb7d4be74cc9ff10090e7ef820e27bfe8815c57e68261311
+  sha256: 380a85cf89e0e69b7cfbe2ea9f765f004ff419f34194018a6827ac0e3edfed4d
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
