@@ -1,4 +1,4 @@
-{% set version = "1.15.0" %}
+{% set version = "1.16.0" %}
 
 package:
   name: wrapt
@@ -6,11 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/w/wrapt/wrapt-{{ version }}.tar.gz
-  sha256: d06730c6aed78cee4126234cf2d071e01b44b915e725a6cb439a879ec9754a3a
+  sha256: 5f370f952971e7d17c7d1ead40e49f32345a7f7a5373571ef44d800d06b1899d
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 0
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -19,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - setuptools >=38.3.0
     - pip
   run:
     - python
@@ -26,6 +28,10 @@ requirements:
 test:
   imports:
     - wrapt
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/GrahamDumpleton/wrapt
