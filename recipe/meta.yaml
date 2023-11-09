@@ -10,7 +10,8 @@ source:
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  skip: true  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   build:
@@ -19,6 +20,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - setuptools >=38.3.0
     - pip
   run:
     - python
@@ -26,6 +28,10 @@ requirements:
 test:
   imports:
     - wrapt
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/GrahamDumpleton/wrapt
